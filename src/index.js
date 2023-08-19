@@ -3,7 +3,7 @@
  * @Author: Jay
  * @Date: 2023-08-18 14:32:46
  * @LastEditors: Jay
- * @LastEditTime: 2023-08-18 14:48:22
+ * @LastEditTime: 2023-08-19 10:16:27
  */
 // React: 框架的核心包
 import React from 'react';
@@ -25,9 +25,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 */
 root.render(
   <BrowserRouter>
-    <Provider store={store}>
       <App />
-    </Provider>
   </BrowserRouter>
 );
 
@@ -38,9 +36,7 @@ root.render(
 //   //严格模式节点，useEffect执行机制
 //   <React.StrictMode>
 //     <BrowserRouter>
-//       <Provider store={store}>
 //         <App />
-//       </Provider>
 //     </BrowserRouter>
 //   </React.StrictMode>
 // );
