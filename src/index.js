@@ -19,11 +19,28 @@ import { BrowserRouter } from 'react-router-dom'
 
 // 渲染根组件App 到一个id为root的DOM节点上
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+/*
+ ! 去掉严格模式 页面不会加载2次
+*/
 root.render(
-  //严格模式节点，useEffect执行机制
-  <React.StrictMode>
-    <BrowserRouter>
+  <BrowserRouter>
+    <Provider store={store}>
       <App />
-    </BrowserRouter>
-  </React.StrictMode>
+    </Provider>
+  </BrowserRouter>
 );
+
+/*
+ ! 严格模式 页面会加载2次
+*/
+// root.render(
+//   //严格模式节点，useEffect执行机制
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <Provider store={store}>
+//         <App />
+//       </Provider>
+//     </BrowserRouter>
+//   </React.StrictMode>
+// );
